@@ -6,11 +6,11 @@ This is an opinionated playbook to setup a Fedora 27+ workstation with everythin
 
 Follow these steps to install Ansible, checkout the Fedora Workstation repo, and run the playbook:
 
-```
+```bash
 sudo dnf install ansible -y
-git checkout https://github.com/jdoss/fedora-workstation.git ~/fedora-workstation
+git clone https://github.com/dread-uo/fedora-workstation.git ~/fedora-workstation
 cd ~/fedora-workstation
-ansible-playbook setup_workstation.yml -e "local_user=yourusername local_user_email=you@example.com" --become --ask-sudo-pass
+ansible-playbook setup_workstation.yml --become --ask-become-pass
 ```
 
 For further customization, edit `vars/vars.yml` to fit your needs.
